@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spirein Tech | Recruitment & Consulting</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="font-sans text-gray-800">
+
+  <!-- Hero Section -->
+  <header class="bg-blue-700 text-white">
+    <div class="max-w-7xl mx-auto px-4 py-16 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold">Spirein Tech</h1>
+      <p class="mt-4 text-lg md:text-xl">Empowering Talent. Driving Success.</p>
+      <a href="#contact" class="mt-6 inline-block bg-white text-blue-700 px-6 py-3 rounded-full font-semibold">Get in Touch</a>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="py-16 bg-gray-100">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">About Us</h2>
+      <p class="text-lg">Spirein Tech is a consulting and recruitment firm specializing in matching top talent with innovative companies. We focus on IT, software, and digital roles to help businesses scale with the right expertise.</p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-10">Our Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white shadow-lg rounded-2xl p-6 text-center">
+          <h3 class="text-xl font-semibold mb-2">IT Recruitment</h3>
+          <p>We source skilled developers, engineers, and analysts across a range of technologies and industries.</p>
+        </div>
+        <div class="bg-white shadow-lg rounded-2xl p-6 text-center">
+          <h3 class="text-xl font-semibold mb-2">Staff Augmentation</h3>
+          <p>Extend your team with flexible and vetted professionals for short or long-term needs.</p>
+        </div>
+        <div class="bg-white shadow-lg rounded-2xl p-6 text-center">
+          <h3 class="text-xl font-semibold mb-2">Consulting Services</h3>
+          <p>Strategic guidance for digital transformation, technology adoption, and IT project delivery.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-blue-50">
+    <div class="max-w-2xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Contact Us</h2>
+      <form id="contactForm" class="space-y-4">
+        <input type="text" id="name" placeholder="Your Name" required class="w-full border border-gray-300 p-3 rounded">
+        <input type="email" id="email" placeholder="Your Email" required class="w-full border border-gray-300 p-3 rounded">
+        <textarea id="message" placeholder="Your Message" required class="w-full border border-gray-300 p-3 rounded"></textarea>
+        <button type="submit" class="w-full bg-blue-700 text-white py-3 rounded font-semibold">Send via Email</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-700 text-white text-center py-6">
+    <p>&copy; 2025 Spirein Tech. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      const subject = encodeURIComponent('Spirein Tech Inquiry from ' + name);
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+
+      window.location.href = `mailto:info@spireintech.com?subject=${subject}&body=${body}`;
+    });
+  </script>
+
+</body>
+</html>
